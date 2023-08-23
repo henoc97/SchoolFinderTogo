@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 
@@ -24,11 +25,11 @@ class ProfilEcole extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Text("${p[i]} :",
-                style: GoogleFonts.ptSerifCaption(color: myColors[4], fontSize: 18),),
+                style: GoogleFonts.ptSerifCaption(color: myColors[4], fontSize: 16.sp),),
               ),
             ],
           ),
-          Container(height: 100,)
+          Container(height: 100,)//a remplir avec des données 
         ],
       )
     ],);

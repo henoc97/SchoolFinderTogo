@@ -82,7 +82,7 @@ class _EcoleContainerState extends State<EcoleContainer> {
                           fontWeight: FontWeight.bold, color:moreInfo%2==1? widget.myColors[0]:widget.myColors[1]),))),
                       ],
                     ),
-                moreInfo%2==1? SizedBox(height: widget.size.height*.18.h,
+                if (moreInfo%2==1) SizedBox(height: widget.size.height*.18.h,
                 child: Column(mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     Row(
@@ -96,13 +96,13 @@ class _EcoleContainerState extends State<EcoleContainer> {
                   Row(
                     children: [
                       Container(decoration: BoxDecoration(color: widget.myColors[4], borderRadius: BorderRadius.circular(15)),
-                        width:widget.size.width*.7,
-                        height: widget.size.height*.08,
+                        width:widget.size.width*.7.w,
+                        height: widget.size.height*.06.h,
                         child: Center(
                           child: Padding(
                             padding: const EdgeInsets.all(8.0),
                             child: Text('  ${widget.myModel[widget.index].program}', style: GoogleFonts.raleway(
-                              fontSize: 18,fontWeight: FontWeight.bold,
+                              fontSize: 16.sp,fontWeight: FontWeight.bold,
                               color: widget.myColors[6]),),
                           ),
                         )),
@@ -111,7 +111,7 @@ class _EcoleContainerState extends State<EcoleContainer> {
                   
                 
                 ],),
-                ):Container(),
+                ) else Container(),
                 Row(mainAxisAlignment: MainAxisAlignment.end,
                   children: [
                     IconButton(onPressed: () {

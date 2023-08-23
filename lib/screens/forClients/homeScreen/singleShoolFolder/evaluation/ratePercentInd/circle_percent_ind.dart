@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:percent_indicator/percent_indicator.dart';
 
@@ -22,14 +23,14 @@ class _CirclePercentIndState extends State<CirclePercentInd> {
                 animation: true,
                 animationDuration:2000,
                 percent: 0.7,
-                center: const Row(
+                center:  Row(
                   children: [
                     Text(
                       "         3.5  ",
                       style:
-                          TextStyle(fontWeight: FontWeight.bold, fontSize: 20.0),
+                          TextStyle(fontWeight: FontWeight.bold, fontSize: 18.sp),
                     ),
-                    FaIcon(FontAwesomeIcons.star,)
+                    const FaIcon(FontAwesomeIcons.star,)
                   ],
                 ),
                 

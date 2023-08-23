@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 
@@ -20,11 +21,11 @@ class Carte extends StatelessWidget {
       Padding(
         padding: const EdgeInsets.all(8.0),
         child: Text("Coordonnées :",
-        style: GoogleFonts.ptSerifCaption(color: myColors[4], fontSize: 18),),
+        style: GoogleFonts.ptSerifCaption(color: myColors[4], fontSize: 16.sp),),
       ),
     ],
           ),
-          Container(height: size.height*.35,width: size.width*.9,
+          Container(height: size.height*.3.h,width: size.width*.9,
           decoration: BoxDecoration(borderRadius: BorderRadius.circular(15)),
           child: Card(elevation: 30,
     child: Column(children: [
@@ -38,7 +39,7 @@ class Carte extends StatelessWidget {
     ]),
           ),
           ),
-          SizedBox(height: size.height*.35,width: size.width*.9)
+          
           ]);
   }
 }

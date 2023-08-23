@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
+
 import '../../../../colors/colorsrepertory.dart';
 import '../component/for_clip.dart';
 import '../component/for_ecole.dart';
@@ -45,7 +47,7 @@ class _SingleSchoolState extends State<SingleSchool> {
               padding: const EdgeInsets.all(8.0),
               child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                Text('Académie Éclatante', style: GoogleFonts.ptSerifCaption(color: myColors[4], fontSize: 18),),
+                Text('Académie Éclatante', style: GoogleFonts.ptSerifCaption(color: myColors[4], fontSize: 16.sp),),
                 CircleAvatar(backgroundColor: myColors[4],
                   child: IconButton(onPressed: (){}, 
                   icon: Icon(Icons.thumb_up, color: myColors[6],),),
@@ -65,16 +67,16 @@ class _SingleSchoolState extends State<SingleSchool> {
                     });
                   },
                   child: Card(elevation:elevationCtr==i? 30:1,
-                    child: SizedBox(height:size.height*.05,
+                    child: SizedBox(height:size.height*.045.h,
                   child: Center(child: Text("  ${t[i]}  ",
-                  style: GoogleFonts.ptSerifCaption(fontWeight:elevationCtr==i? FontWeight.bold:FontWeight.normal, color: myColors[4], fontSize: 18),
+                  style: GoogleFonts.ptSerifCaption(fontWeight:elevationCtr==i? FontWeight.bold:FontWeight.normal, color: myColors[4], fontSize: 16.sp),
                   )))),
                 )
               ],),
             ),
             Expanded(child: SingleChildScrollView(child: elevationCtr==0?ProfilEcole(myColors: myColors, p: p,):
-            elevationCtr==2?Carte(myColors: myColors, size: size):
-            Evaluation(size: size, myColors: myColors),))
+            elevationCtr==1?Evaluation(myColors: myColors, size: size):
+            Carte(size: size, myColors: myColors),))
           ],))
       ],),
     );
