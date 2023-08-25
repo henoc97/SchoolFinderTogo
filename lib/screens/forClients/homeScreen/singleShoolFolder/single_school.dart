@@ -4,7 +4,6 @@ import 'package:google_fonts/google_fonts.dart';
 
 import '../../../../colors/colorsrepertory.dart';
 import '../component/for_clip.dart';
-import '../component/for_ecole.dart';
 import 'carte/small_map.dart';
 import 'evaluation/evaluation.dart';
 import 'profilEcole/profile_ecole.dart';
@@ -13,9 +12,10 @@ import 'profilEcole/profile_ecole.dart';
 
 
 class SingleSchool extends StatefulWidget {
-  const SingleSchool({super.key, required this.index});
+  const SingleSchool({super.key, required this.index, required this.myEcole});
 
   final int index;
+  final List myEcole;
 
   @override
   State<SingleSchool> createState() => _SingleSchoolState();
@@ -30,7 +30,7 @@ class _SingleSchoolState extends State<SingleSchool> {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     List<Color>myColors = ColorsRepertory().colorApp0;
-    List<EcoleItems> myEcole = EcoleItems.getNewestItems();
+    List myEcole = widget.myEcole;
     return Scaffold(
       body: Column(children: [
         Flexible(flex: 2,

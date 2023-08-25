@@ -2,8 +2,10 @@
 
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:lottie/lottie.dart';
+
 import '../../../../colors/colorsrepertory.dart';
 import 'ecole_container.dart';
 import 'for_ecole.dart';
@@ -32,12 +34,12 @@ class _SortCategoState extends State<SortCatego> {
           Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
             IconButton(onPressed: (){}, 
-            icon:  Icon(Icons.more_vert_outlined, size: 30, color: myColors[2],)),
+            icon:  Icon(Icons.more_vert_outlined, size: 27.sp, color: myColors[2],)),
             Row(children: [
              // IconButton(onPressed: (){}, 
              // icon:  FaIcon(Icons.sunny, size: 30, color: myColors[3],), ),
               CircleAvatar(
-                child: Container(height: size.height*.1,width: size.width*.1,
+                child: Container(height: size.height*.1.h,width: size.width*.1.w,
                   decoration: const BoxDecoration(image: DecorationImage(image: AssetImage("assets/photos/avatar/7309681.jpg")), 
                   borderRadius: BorderRadius.all(Radius.circular(100))),),
               )
@@ -46,7 +48,8 @@ class _SortCategoState extends State<SortCatego> {
             Row(
               children: [
                 SizedBox(width: size.width*.9,
-                  child: Text(" Categories : ${widget.sortName}",style: GoogleFonts.dancingScript(fontSize: 32,fontWeight: FontWeight.bold, color: myColors[4]),)),
+                  child: Text(" Categories : ${widget.sortName}",style: GoogleFonts.dancingScript(fontSize: 28.sp,
+                  fontWeight: FontWeight.bold, color: myColors[4]),)),
               ],
             ),
           
@@ -54,7 +57,7 @@ class _SortCategoState extends State<SortCatego> {
                           child:Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             Text('Ecoles', style: GoogleFonts.ptSerifCaption(color: myColors[1], 
-                            fontWeight: FontWeight.bold,fontSize: 20)),
+                            fontWeight: FontWeight.bold,fontSize: 18.sp)),
                             GestureDetector(
                               onTap: () {
                                 

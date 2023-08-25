@@ -51,8 +51,8 @@ class PromotionShower extends StatelessWidget {
         scrollDirection: Axis.horizontal,
         itemBuilder: (context, index) {
         return 
-        Container(margin: EdgeInsets.only(left: size.width*.12.h, right: size.width*.07.w,) ,
-          child: Center(child: Container(height: size.height*.17.h, width: size.width*.65.w,
+        Container(margin: EdgeInsets.only(left: size.width*.1, right: size.width*.07,) ,
+          child: Center(child: Container(height: size.height*.2, width: size.width*.8,
           decoration: BoxDecoration(color: myColors[1],
             image: DecorationImage(opacity: 0.5,
             fit: BoxFit.cover, image: AssetImage(myPromotionList[index].pic)), 
@@ -71,7 +71,7 @@ class PromotionShower extends StatelessWidget {
             ],),
             Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-              Container(width: size.width*.35.w,
+              Container(width: size.width*.5,
                 margin: const EdgeInsets.only(left:15),
                 child:  Text(myPromotionList[index].motiv, 
                 style: GoogleFonts.raleway(fontWeight: FontWeight.bold, color: myColors[0]))),

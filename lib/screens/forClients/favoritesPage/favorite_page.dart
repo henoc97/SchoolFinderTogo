@@ -50,10 +50,10 @@ class _FavoritesPageState extends State<FavoritesPage> {
               itemBuilder: (BuildContext context, int index) {
                 return GestureDetector(
                   onTap: () {
-                    Navigator.push(context, PageRouteBuilder(pageBuilder: (_,__,___)=> SingleSchool(index: index,)));
+                    Navigator.push(context, PageRouteBuilder(pageBuilder: (_,__,___)=> SingleSchool(index: index, myEcole: myEcole,)));// liste a modifier a l avenir, c est juste pour un test
                   },
                   child: Container(margin: const EdgeInsets.only(bottom: 10),
-                    child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    child: Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
                       Container(height: size.height*.12.h,width: size.width*.28.w,
                       decoration: BoxDecoration(color: myColors[5].withOpacity(0.7),

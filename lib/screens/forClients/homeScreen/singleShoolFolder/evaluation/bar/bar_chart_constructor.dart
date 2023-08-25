@@ -94,7 +94,7 @@ class _ShowBarChartState extends State<ShowBarChart> {
             return const Text('');
           }
         },)),
-        leftTitles: AxisTitles( sideTitles: SideTitles(reservedSize:60.w, showTitles: true, getTitlesWidget: (value, meta){
+        leftTitles: AxisTitles( sideTitles: SideTitles(reservedSize:65.w, showTitles: true, getTitlesWidget: (value, meta){
           if (value == 0 ){
             return  Text("0.0 %", style: GoogleFonts.raleway(color: myColors[4], fontSize: 15.sp, fontWeight: FontWeight.bold),);
           }else if (value == 1){

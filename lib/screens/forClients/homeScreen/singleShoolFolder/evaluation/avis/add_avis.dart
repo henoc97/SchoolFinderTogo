@@ -29,7 +29,7 @@ class _AddAvisState extends State<AddAvis> {
               child: Column(
                 
                 children: [
-                  SizedBox(height: size.height*.71.h,
+                  SizedBox(height: size.height*.86,
                     child: ListView.builder(itemBuilder: (context, index) {
                       return Padding(
                         padding: const EdgeInsets.all(8.0),
@@ -76,7 +76,7 @@ class _AddAvisState extends State<AddAvis> {
             ),
             Center(
               child: rateCtr==1? Container(margin: const EdgeInsets.only(right: 3.5),
-                            height: size.height*.14.h,
+                            height: size.height*.16.h,
                             width: size.width*.6.w,
                             decoration: BoxDecoration(color:myColors[0], borderRadius: BorderRadius.circular(15)),
                             child: Padding(

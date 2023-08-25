@@ -34,7 +34,7 @@ class _EcoleContainerState extends State<EcoleContainer> {
       onTap: () {
         
               Navigator.push(context, PageRouteBuilder(
-        pageBuilder:  (_, __, ___) =>SingleSchool(index: index)));
+        pageBuilder:  (_, __, ___) =>SingleSchool(index: widget.index, myEcole: widget.myModel,)));
             },
       child: Column(
         children: [
@@ -56,7 +56,7 @@ class _EcoleContainerState extends State<EcoleContainer> {
                 Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     SizedBox(
-                      width: widget.size.width*.5.w,
+                      width: widget.size.width*.55.w,
                       child: Text('${widget.myModel[widget.index].name}', 
                       style: GoogleFonts.raleway(fontSize: 16.sp, fontWeight: FontWeight.bold),)),
                       IconButton(onPressed: (){},
@@ -66,7 +66,7 @@ class _EcoleContainerState extends State<EcoleContainer> {
                 Row(
                   children: [
                     Card(
-                      child: SizedBox(width: widget.size.width*.5.w,height: widget.size.height*.03.h,
+                      child: SizedBox(width: widget.size.width*.7,//height: widget.size.height*.03.h,
                         child: Center(child: Text('  ${widget.myModel[widget.index].nivEduc} ', style: GoogleFonts.raleway(fontSize: 18,fontWeight: FontWeight.bold),))),
                     ),
                   ],
@@ -97,7 +97,7 @@ class _EcoleContainerState extends State<EcoleContainer> {
                     children: [
                       Container(decoration: BoxDecoration(color: widget.myColors[4], borderRadius: BorderRadius.circular(15)),
                         width:widget.size.width*.7.w,
-                        height: widget.size.height*.06.h,
+                       // height: widget.size.height*.06.h,
                         child: Center(
                           child: Padding(
                             padding: const EdgeInsets.all(8.0),

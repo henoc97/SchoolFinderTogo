@@ -3,7 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../../service/cubit/sign_log_controller_cubit.dart';
-import '../page_scroller.dart';
+import '../menu/menu_page.dart';
 
 class CenterLogin extends StatefulWidget {
   const CenterLogin({
@@ -117,7 +117,7 @@ class _CenterLoginState extends State<CenterLogin> {
           ),
           GestureDetector(
             onTap: () {
-              Navigator.push(context, PageRouteBuilder(pageBuilder: (_,__,___)=>const PageScroller()));
+              Navigator.push(context, PageRouteBuilder(pageBuilder: (_,__,___)=>const MenuMain()));
             },
             child: Container(
                 width: 200.w,
